@@ -5,6 +5,6 @@ class Context {
     println '----'
     println script.MY_ATTR
     println '----'
-    return cript.MY_ATTR 
+    return '..' + script.MY_ATTR + '..'
   }
 }
