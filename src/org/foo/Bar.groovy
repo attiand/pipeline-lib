@@ -1,6 +1,12 @@
 package org.foo;
 
-class Bar {
-  final static String ONE = 'one'
-  final static String TWO = 'two'
+enum Bar {
+  ONE('one'),
+  TWO('two')
+
+  private final String label;
+
+  int getLabel() {
+  		label
+  	}
 }
