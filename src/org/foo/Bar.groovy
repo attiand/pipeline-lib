@@ -6,7 +6,11 @@ enum Bar {
 
   private final String label;
 
-  int getLabel() {
+  Bar(String label) {
+  		this.label = label
+  	}
+
+  String getLabel() {
   		label
   	}
 }
