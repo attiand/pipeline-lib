@@ -1,6 +1,6 @@
 package org.foo;
 
 class Bar {
-  final String ONE = 'one'
-  final String TWO = 'two'
+  final static String ONE = 'one'
+  final static String TWO = 'two'
 }
