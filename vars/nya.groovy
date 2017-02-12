@@ -1,5 +1,5 @@
 class nya implements Serializable {
-    private Docker docker
+    private String docker
     def setDocker(value) {
         docker = value
     }
@@ -8,6 +8,7 @@ class nya implements Serializable {
     }
 }
 
+/*
 class Docker implements Serializable {
     private String registry
     def setRegistry(value) {
@@ -27,3 +28,4 @@ class Registry implements Serializable {
         link
     }
 }
+*/
