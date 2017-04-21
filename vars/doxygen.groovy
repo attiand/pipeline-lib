@@ -13,6 +13,7 @@ warning /:\\s+warning:/
 
          sh 'rm -f -r doxygen'
          sh 'mkdir -p doxygen/cfg'
+         /*
          sh "cp $config.doxydir/* doxygen/cfg"
 
          def template = readFile("$config.doxydir/doxyfile.conf")
@@ -22,7 +23,7 @@ warning /:\\s+warning:/
                          replaceFirst(/(?m)^LAYOUT_FILE\s*=.*/, 'LAYOUT_FILE=doxygen/cfg/doxygenlayout.xml')
 
          writeFile(file: 'doxygen/cfg/doxyfile.conf', text: cfg)
-
+         */
          try {
                  docker.image("nya-docker-registry.its.umu.se/build-doxygen:0.0.1").inside {
                    sh "doxygen doxygen/cfg/doxyfile.conf"
