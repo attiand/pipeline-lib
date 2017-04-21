@@ -3,7 +3,7 @@ error /:\\s+error:/
 warning /:\\s+warning:/
 '''
 
- def withArguments(docker, body) {
+ def withArguments(body) {
          def config = [:]
          body.resolveStrategy = Closure.DELEGATE_FIRST
          body.delegate = config
@@ -24,7 +24,9 @@ warning /:\\s+warning:/
          writeFile(file: 'doxygen/cfg/doxyfile.conf', text: cfg)
 
          try {
-                 //docker.image("nya-docker-registry.its.umu.se/build-doxygen:0.0.1").inside {  sh "doxygen doxygen/cfg/doxyfile.conf" }
+                 docker.image("nya-docker-registry.its.umu.se/build-doxygen:0.0.1").inside {
+                   sh "doxygen doxygen/cfg/doxyfile.conf"
+                 }
 
                  writeFile(file: 'jenkins-rule-logparser', text: logParserRules)
          }
