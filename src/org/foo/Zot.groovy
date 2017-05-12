@@ -1,5 +1,5 @@
 package org.foo;
 
-def print(message) {
-  sh "message ${message}"
+def myecho(message) {
+  sh "echo message ${message}"
 }
