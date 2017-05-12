@@ -1,6 +1,6 @@
 import org.foo.Zot
 
-def call(Closure body) {
+def call(String message, Closure body) {
   def z = new Zot()
-  z.myecho("hello")
+  z.myecho(message)
 }
